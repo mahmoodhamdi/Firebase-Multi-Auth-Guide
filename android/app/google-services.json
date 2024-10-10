@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1096731177237",
+    "project_id": "guide-multi-4261",
+    "storage_bucket": "guide-multi-4261.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096731177237:android:c5c497523a8a530e0db91c",
+        "android_client_info": {
+          "package_name": "com.example.firebase_multi_auth_guide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEMJlekKjMYTzndbsUPwqZWq99NAnDEW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

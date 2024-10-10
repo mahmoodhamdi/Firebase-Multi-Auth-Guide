@@ -9,6 +9,7 @@ class FirebaseMultiAuthGuide extends StatelessWidget {
     return const MaterialApp(
       title: 'Firebase Multi Auth Guide',
       home:RegisterPage(),
+      
     );
   }
 }
