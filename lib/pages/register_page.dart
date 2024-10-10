@@ -1,4 +1,7 @@
 import 'package:firebase_multi_auth_guide/pages/login_page_.dart';
+import 'package:firebase_multi_auth_guide/widgets/google_sign_in_button.dart';
+import 'package:firebase_multi_auth_guide/widgets/full_width_button.dart';
+import 'package:firebase_multi_auth_guide/widgets/sign_up_button.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -50,37 +53,32 @@ class RegisterPage extends StatelessWidget {
                   crossAxisSpacing: 16,
                   childAspectRatio: 2.5,
                   children: [
-                    _buildSignUpButton(
-                      text: 'Google',
-                      color: Colors.red.shade400,
-                      icon: Icons.g_mobiledata,
-                      onPressed: () {},
-                    ),
-                    _buildSignUpButton(
+                    const GoogleSignInButton(),
+                    SignUpButton(
                       text: 'Facebook',
                       color: Colors.blue.shade600,
                       icon: Icons.facebook,
                       onPressed: () {},
                     ),
-                    _buildSignUpButton(
+                    SignUpButton(
                       text: 'Twitter',
                       color: Colors.lightBlue.shade400,
                       icon: Icons.alternate_email,
                       onPressed: () {},
                     ),
-                    _buildSignUpButton(
+                    SignUpButton(
                       text: 'GitHub',
                       color: Colors.black87,
                       icon: Icons.code,
                       onPressed: () {},
                     ),
-                    _buildSignUpButton(
+                    SignUpButton(
                       text: 'Microsoft',
                       color: Colors.blue.shade800,
                       icon: Icons.window,
                       onPressed: () {},
                     ),
-                    _buildSignUpButton(
+                    SignUpButton(
                       text: 'Apple',
                       color: Colors.black,
                       icon: Icons.apple,
@@ -97,14 +95,14 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 24),
-                _buildFullWidthButton(
+                FullWidthButton(
                   text: 'Email and Password',
                   color: Colors.deepPurple.shade400,
                   icon: Icons.email,
                   onPressed: () {},
                 ),
                 const SizedBox(height: 16),
-                _buildFullWidthButton(
+                FullWidthButton(
                   text: 'Phone Number',
                   color: Colors.green.shade600,
                   icon: Icons.phone,
@@ -141,66 +139,6 @@ class RegisterPage extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _buildSignUpButton({
-    required String text,
-    required Color color,
-    required IconData icon,
-    required VoidCallback onPressed,
-  }) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: color,
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, size: 20),
-          const SizedBox(width: 8),
-          Text(
-            text,
-            style: const TextStyle(fontSize: 14),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildFullWidthButton({
-    required String text,
-    required Color color,
-    required IconData icon,
-    required VoidCallback onPressed,
-  }) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: color,
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, size: 24),
-          const SizedBox(width: 12),
-          Text(
-            text,
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          ),
-        ],
       ),
     );
   }
